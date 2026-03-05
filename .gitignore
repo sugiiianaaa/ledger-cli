@@ -1,0 +1,27 @@
+# Build output
+bin/
+obj/
+
+# SQLite database (runtime data, not source)
+*.db
+*.db-shm
+*.db-wal
+
+# User-specific VS/Rider files
+.vs/
+*.user
+*.suo
+
+# JetBrains Rider
+.idea/
+
+# dotnet publish output
+publish/
+
+# NuGet
+*.nupkg
+.nuget/
+
+# OS
+.DS_Store
+Thumbs.db
