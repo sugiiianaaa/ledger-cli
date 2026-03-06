@@ -1,4 +1,6 @@
 using Xunit;
+using Ledger.Domain.Entities;
+using Ledger.Domain.Enums;
 
 public class TransactionTests
 {
@@ -26,6 +28,8 @@ public class TransactionTests
         var date = new DateOnly(2026, 1, 1);
         var amount = -40000m;
         var category = Category.FoodAndDrink;
+
+        // Act
 
         // Assert
         Assert.Throws<ArgumentException>(() => Transaction.Create(date, amount, category, null));

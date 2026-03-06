@@ -1,3 +1,7 @@
+namespace Ledger.Domain.Entities;
+
+using Ledger.Domain.Enums;
+
 public class Transaction
 {
     public long Id { get; private set; }
