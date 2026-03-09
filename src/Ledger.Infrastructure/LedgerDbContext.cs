@@ -1,14 +1,11 @@
-using Microsoft.EntityFrameworkCore;
 using Ledger.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Ledger.Infrastructure;
 
-public class LedgerDbContext : DbContext
+public class LedgerDbContext(DbContextOptions<LedgerDbContext> options) : DbContext(options)
 {
     public DbSet<Transaction> Transactions => Set<Transaction>();
-
-    public LedgerDbContext(DbContextOptions<LedgerDbContext> options)
-        : base(options) { }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
