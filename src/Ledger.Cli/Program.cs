@@ -79,7 +79,7 @@ while (true)
 
     var input = line.Trim();
 
-    if (input is "" )
+    if (input is "")
         continue;
 
     if (input is "exit" or "quit")

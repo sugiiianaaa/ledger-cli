@@ -11,7 +11,7 @@ public class TransactionTests
     {
         // Arrange
         var date = new DateOnly(2026, 1, 1);
-        const decimal amount = 50000m; 
+        const decimal amount = 50000m;
         const Category category = Category.FoodAndDrink;
 
         // Act
@@ -29,7 +29,7 @@ public class TransactionTests
     {
         // Arrange
         var date = new DateOnly(2026, 1, 1);
-        const decimal amount = 50000m; 
+        const decimal amount = 50000m;
         const Category category = Category.Salary;
 
         // Act

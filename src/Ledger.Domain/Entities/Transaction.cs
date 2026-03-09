@@ -11,7 +11,7 @@ public class Transaction
     public TransactionType Type { get; private set; }
     public Category Category { get; private set; }
     public string? Note { get; private set; }
-    
+
 #pragma warning disable CS8618
     private Transaction() { } // EF Core
 #pragma warning restore CS8618
@@ -53,7 +53,7 @@ public class Transaction
         if (amount <= 0)
             throw new ArgumentException($"{amount} is not valid. Amount must be greater than zero.");
 
-        if(!CategoryTypes.TryGetValue(category, out var transactionType))
+        if (!CategoryTypes.TryGetValue(category, out var transactionType))
             throw new ArgumentException($"{category} is not supported.");
 
         return new Transaction(date, amount, transactionType, category, note);
